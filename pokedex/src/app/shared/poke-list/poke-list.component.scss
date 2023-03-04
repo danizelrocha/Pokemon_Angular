@@ -5,14 +5,14 @@ $padding: rem-calc(20);
 :host {
   width: 100%;
 
-    .listagem {
-     display: flex;
-     justify-content: space-between;
-     flex-wrap: wrap;
+  .listagem {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
-     padding: $padding 0;
+    padding: $padding 0;
 
-     .pokemon {
+    .pokemon {
       position: relative;
       display: flex;
       background: var(--branco);
@@ -78,9 +78,9 @@ $padding: rem-calc(20);
           width: rem-calc(60);
         }
       }
-     }
+    }
 
-     @media (max-width: 400px) {
+    @media (max-width: 400px) {
       a {
         width: 100% !important;
       }
