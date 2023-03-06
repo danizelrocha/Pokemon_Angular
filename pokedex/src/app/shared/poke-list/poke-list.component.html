@@ -1,20 +1,25 @@
 <!-- Searchtmlh -->
 <section class="listagem">
-  <ng-template>
-    <a  class="pokemon" >
+  <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
+    <a  class="pokemon" *ngIf="pokemon.status">
       <section class="pokemon__status">
         <h2>
-         Bulkbasauro
+         {{ pokemon.name }} {{ pokemon.status.id }}
         </h2>
 
         <ul>
-          <li>Grass</li>
-          <li>Poison</li>
+          <li *ngFor="let  value of pokemon.status.type">
+            {{ value.type.name }}
+          </li>
+
         </ul>
       </section>
 
       <section class="pokemon__image">
-        <img src="assets/pokemon.png">
+       <img
+         [src]="pokemon.status.sprites.other.dream_world.front_default"
+         [alt]="pokemon.name"
+        >
       </section>
     </a>
   </ng-template>
