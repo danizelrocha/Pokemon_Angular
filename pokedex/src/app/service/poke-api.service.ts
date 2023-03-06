@@ -33,7 +33,7 @@ export class PokeApiService {
   public apiGetPokemon( url: string ):Observable<any>{
     return this.http.get<any>( url ).pipe(
       map(
-        ( res: any) => res
+        res => res
       )
     )
   }
